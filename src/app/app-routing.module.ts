@@ -4,16 +4,21 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { authGuard } from './guards/auth.guard';
 import { RegisterComponent } from './components/register/register.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 const routes: Routes = [
 
   { path: 'login',
     component: LoginComponent
   },
+  { path: 'todo',
+    component: TodoComponent,
+    canActivate: [authGuard]
+  },
   {
     path: 'home',
-    component: HomeComponent,
-    canActivate: [authGuard]
+    component: HomeComponent
+   
   },
   {
     path: 'register',
@@ -21,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/todo',
     pathMatch: 'full'
   }
 ];

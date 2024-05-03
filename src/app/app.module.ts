@@ -11,16 +11,21 @@ import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { CheckboxModule } from 'primeng/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodoComponent } from './components/todo/todo.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     ButtonModule,
     HttpClientModule,
     ToastModule,
+    CommonModule,
+    FormsModule,
+    TableModule,
+    CheckboxModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [

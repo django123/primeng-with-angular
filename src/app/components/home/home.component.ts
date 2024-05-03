@@ -7,10 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-constructor(private router: Router){}
+constructor(){}
 
-  logOut(){
-    sessionStorage.clear();
-    this.router.navigate(['login']);
-  }
+
 }
